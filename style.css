@@ -1,0 +1,116 @@
+  
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #6a11cb, #2575fc, #6a11cb, #2575fc);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.5s ease;
+    }
+    .converter-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 320px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .converter-container:hover {
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      color: #222;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="number"]:focus {
+      border-color: #2575fc;
+      box-shadow: 0 0 8px rgba(37, 117, 252, 0.6);
+      outline: none;
+    }
+    select {
+      width: 48%;
+      padding: 0.6rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    select:focus {
+      border-color: #2575fc;
+      box-shadow: 0 0 8px rgba(37, 117, 252, 0.6);
+      outline: none;
+    }
+    .select-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.85rem;
+      font-size: 1.1rem;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(37, 117, 252, 0.4);
+    }
+    button:hover {
+      background-color: #1a52d1;
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(26, 82, 209, 0.6);
+    }
+    .result {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      color: #222;
+      min-height: 1.5em;
+      opacity: 0;
+      animation: fadeIn 0.6s forwards;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .error {
+      color: #ff4d4d;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      min-height: 1.2em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
